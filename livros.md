@@ -1,5 +1,5 @@
 # Clássicos da Literatura Brasileira
-- Dom Casmurro - Machado de Assis
+- Dom Casmurro - Machado de Assis (X completo)
 - Capitães da Areia - Jorge Amado
 - Vidas Secas - Graciliano Ramos
 - O Cortiço - Aluísio Azevedo
@@ -10,3 +10,6 @@
 - Triste Fim de Policarpo Quaresma - Lima Barreto
 - Grande Sertão: Veredas - Guimarães Rosa
 - Senhora - José de Alencar
+
+## Metas de Leitura
+- Ler 1 capítulo por dia antes de dormir.
