@@ -1,0 +1,67 @@
+            - name: Code PushUp
+  # You may pin to the exact commit or the version.
+  # uses: code-pushup/github-action@e389f2aadf7f39fe27b38e9f55b41bd45f4889a8
+  uses: code-pushup/github-action@v0.12.0
+  with:
+    # For repos containing multiple projects. Options are:
+
+- `false`: single project mode (default)
+- `true`: turns on monorepo mode (autodetects tool unless `projects` is specified)
+- `nx`: Nx workspace
+- `turbo`: Turborepo
+- `npm`: NPM workspaces
+- `yarn`: Yarn workspaces
+- `pnpm`: PNPM workspaces
+
+    monorepo: 
+    # Configures parallel execution in monorepo mode. Possibly values are:
+
+- `false`: sequential (default)
+- `true`: parallel with default number of jobs (depends on monorepo tool)
+- integer which sets the number of concurrent jobs
+
+    parallel: 
+    # Project folders for custom monorepo setup.
+
+Only used when `monorepo: true` is set and no known monorepo tool is detected.
+Should be a comma-separated list of project folders (supports globs).
+
+    projects: # optional
+    # Name of task for running Code PushUp CLI in monorepo mode. Defaults to `code-pushup`.
+
+Depending on what monorepo tool is being used, this task may represent a `package.json` script, binary executable, Nx target or Turbo task.
+
+    task: # default is code-pushup
+    # CLI arguments for `nx show projects` used to list Nx projects in monorepo mode. Replaces `{task}` with `task` input.
+
+    nxProjectsFilter: # default is --with-target={task}
+    # Custom code-pushup executable
+    bin: # default is npx --no-install code-pushup
+    # Custom code-pushup.config path
+    config: # optional
+    # Custom working directory
+    directory: # optional
+    # Silence logs from Code Pushup CLI
+    silent: 
+    # GITHUB_TOKEN or a repo scoped PAT
+    token: # default is ${{ github.token }}
+    # Upload/download artifacts for caching code-pushup reports
+    artifacts: # default is true
+    # Artifact retention period in days
+    retention: # optional
+    # Create file annotations in GitHub
+    annotations: # default is true
+    # Skip PR comment
+    skipComment: 
+    # Performance optimization for large monorepos - `persist` and `upload` configs provided upfront to skip parsing.
+Replaces `{projectName}` in configured values with name of each project.
+    configPatterns: # optional
+    # If enabled and portal cache is used, looks for previous report in target branch's 10
+most recent commits (not only latest).
+
+Supports boolean or an integer (1-100), the latter overrides the default number of commits (10).
+
+    searchCommits: 
+    # Differentiate PR comments (useful if multiple jobs run Code PushUp)
+    jobId: # optional
+          
