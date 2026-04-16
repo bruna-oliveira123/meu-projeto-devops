@@ -13,3 +13,5 @@
 
 ## Metas de Leitura
 - Ler 1 capítulo por dia antes de dormir.
+
+*Nota: Este projeto faz parte do portfólio de DevOps para praticar versionamento.*
