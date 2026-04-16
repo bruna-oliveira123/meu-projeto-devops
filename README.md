@@ -7,4 +7,4 @@ O objetivo é demonstrar a configuração de um fluxo de integração e entrega 
 * Práticas de criação de branches e commits.
 * Gerenciamento de Pull Requests (PRs).
 * Organização de arquivos em Markdown.
-..
+......
